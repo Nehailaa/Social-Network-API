@@ -35,7 +35,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 `Clone GitHub repository`
 `npm init`
 `npm install`
-`Make that MongoDB and Express are installed `
+`Make sure that MongoDB and Express are installed `
 
   
 ## Usage

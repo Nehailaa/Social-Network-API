@@ -26,7 +26,7 @@ router
 
 // -- Runs to: /api/user/:userId/friends/:friendId <POST, DELETE>
 router
-    .route('/:userId/friends/:friendId')
+    .route('/:id/friends/:friendId')
     .post(addFriend)
     .delete(deleteFriend)
 

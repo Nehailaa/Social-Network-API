@@ -1,6 +1,6 @@
-const { User } = require('../models');
+const { User, Thought } = require('../models');
 
-const UserController = {
+const userController = {
 
     // Create new User
     createUser({ body }, res) {
@@ -108,4 +108,4 @@ const UserController = {
 
 };
 
-module.exports = UserController; 
+module.exports = userController; 

@@ -1,6 +1,6 @@
 const {Thought, User} = require('../models');
 
-const ThoughtController = {
+const thoughtController = {
 
     // Create a thought
     createThought({params, body}, res) {
@@ -12,7 +12,7 @@ const ThoughtController = {
         })
         .then(dbThoughtData => {
             if(!dbThoughtData) {
-                res.status(404).json({message: 'Whoops! No thoughts is found with this ID!'});
+                res.status(404).json({message: 'Whoops! No thought is found with this ID!'});
                 return;
             }
             res.json(dbThoughtData)
@@ -43,9 +43,10 @@ const ThoughtController = {
             select: '-__v'
         })
         .select('-__v')
+        .sort({_id: -1})
         .then(dbThoughtData => {
             if(!dbThoughtData) {
-            res.status(404).json({message: 'Whoops! No thoughts is found with this ID!'});
+            res.status(404).json({message: 'Whoops! No thought is found with this ID!'});
             return;
         }
         res.json(dbThoughtData)
@@ -63,7 +64,7 @@ const ThoughtController = {
         .select('-___v')
         .then(dbThoughtData => {
             if (!dbThoughtData) {
-                res.status(404).json({message: 'Whoops! No thoughts is found with this ID!'});
+                res.status(404).json({message: 'Whoops! No thought is found with this ID!'});
                 return;
             }
                 res.json(dbThoughtData);
@@ -76,7 +77,7 @@ const ThoughtController = {
         Thought.findOneAndDelete({_id: params.id})
         .then(dbThoughtData => {
             if (!dbThoughtData) {
-                res.status(404).json({message: 'Whoops! No thoughts is found with this ID!'});
+                res.status(404).json({message: 'Whoops! No thought is found with this ID!'});
                 return;
             }
             res.json(dbThoughtData);
@@ -94,7 +95,7 @@ const ThoughtController = {
         .select('-__v')
         .then(dbThoughtData => {
         if (!dbThoughtData) {
-            res.status(404).json({message: 'Whoops! No thoughts is found with this ID!'});
+            res.status(404).json({message: 'Whoops! No thought is found with this ID!'});
             return;
         }
         res.json(dbThoughtData);
@@ -123,4 +124,4 @@ const ThoughtController = {
 
 };
 
-module.exports = ThoughtController;
+module.exports = thoughtController;
