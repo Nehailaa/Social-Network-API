@@ -7,7 +7,7 @@ const thoughtController = {
         Thought.create(body)
         .then(({_id}) => {
             return User.findOneAndUpdate({ _id: params.userId}, 
-                {$push: {Thought: _id}}, 
+                {$push: {thoughts: _id}}, 
                 {new: true});
         })
         .then(dbThoughtData => {
