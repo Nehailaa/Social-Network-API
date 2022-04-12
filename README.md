@@ -4,6 +4,10 @@
 
 🔍 This is an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. I used Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
+
+<img src="demo/demo.mov" alt="Video of the project" />
+
+
 ## User Story
 
 AS A social media startup
@@ -38,7 +42,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 `Make sure that MongoDB and Express are installed `
 
   
-## Usage
+## Usage 
 💻   
   
 `npm start`
